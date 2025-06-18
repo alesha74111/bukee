@@ -23,7 +23,7 @@ const paths = {
         dist: `${buildDir}styles/`,
         watch: [
             "./src/blocks/**/*.{scss,sass}",
-            "./src/styles/**/*.{scss,sass}`
+            "./src/styles/**/*.{scss,sass}"
         ]
     },
     scripts: {
@@ -31,7 +31,7 @@ const paths = {
         dist: `${buildDir}js/`,
         watch: [
             "./src/blocks/**/*.js",
-            "./src/js/**/*.js`
+            "./src/js/**/*.js"
         ]
     },
     images: {
@@ -40,7 +40,7 @@ const paths = {
             "!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}"
         ],
         dist: `${buildDir}img/`,
-        watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}`
+        watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}"
     },
     sprites: {
         src: "./src/img/sprites/*.svg",
@@ -50,7 +50,7 @@ const paths = {
     fonts: {
         src: "./src/fonts/**/*.{woff,woff2}",
         dist: `${buildDir}fonts/`,
-        watch: "./src/fonts/**/*.{woff,woff2}`
+        watch: "./src/fonts/**/*.{woff,woff2}"
     },
     favicons: {
         src: "./src/img/favicon/*.{jpg,jpeg,png,gif}",
