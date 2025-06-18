@@ -1,0 +1,25 @@
+@import "helpers/variables";
+@mixin custom-block-style($width: null,$max-width: null, $margin: null, $padding: null) {
+    width: $width;
+    @if $max-width !=null {
+        max-width: $max-width;
+    }
+    @if $margin !=null {
+        margin: $margin;
+    }
+    @if $padding !=null {
+        padding: $padding;
+    }
+}
+
+@mixin respond($size) {
+    $value: map-get($breakpoint, $size);
+    @if $value {
+        @media (max-width: $value) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Breakpoint `#{$size}` not found in \$breakpoint map.";
+    } 
+}

@@ -1,0 +1,56 @@
+.page {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    position: relative;
+    @include respond(xl) {
+        padding: 120px 0;
+    }
+    @include respond(lg) {
+        padding: 60px 0;
+    }
+    &--gray {
+        background-color: $bg-light-color;
+    }
+    &__title {
+        margin-bottom: 25px;
+        font-size: 48px;
+        letter-spacing: 2px;
+        text-align: center;
+    @include respond(sm) {
+        margin-bottom: 15px;
+        font-size: 36px;
+        line-height: 1.1;
+        }
+    }
+    &__subtitle {
+        font-size: $font-size-secondary;
+        color: $accent-color;
+        text-align: center;
+        letter-spacing: 0.9px;
+        @include respond(sm){
+            font-size: 16px;
+        }
+    }
+    &-block__svg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        min-height: 694px;
+        background: $bg-dark-color;
+        clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%);
+        z-index: -1;
+        @include respond(lg){
+            display: none;
+        }
+    }
+    &-carousel {
+        @include respond(lg){
+            background-color: $bg-dark-color;
+        }
+    }
+}
+.page-main {
+    color: $light-color;
+    background-color: #426384;
+    background-image: linear-gradient(-60deg, #54b7a1 0, #426384 100%);
+}

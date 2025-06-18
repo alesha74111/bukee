@@ -1,0 +1,13 @@
+.logo {
+    display: block;
+    width: 137px;
+    height: 28px;
+    background-repeat: no-repeat;
+    &--header {
+        background-image: url('../img/logo.svg');
+    }
+    &--footer {
+        margin-bottom: 26px;
+        background-image: url('../img/logo_footer.svg');
+    } 
+}

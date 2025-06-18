@@ -1,0 +1,26 @@
+h1, h2, h3, h4, h5, h6, ul, p{
+    margin: 0;
+    padding: 0;
+}
+h3{
+    font-size: 24px;
+    letter-spacing: 1.2px;
+}
+body{
+    font-family: $font-primary;
+    font-size: $font-size-primary;
+    color:$dark-color;
+    line-height: 1.6;
+}
+.wrap{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    &--lines {
+        padding-bottom: 162px;
+        background-image: url(../img/bg_lines.png);
+        background-origin: content-box;
+        background-size: cover;
+    }
+}

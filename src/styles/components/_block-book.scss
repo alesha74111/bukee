@@ -1,0 +1,50 @@
+.block-book {
+    display: flex;
+    justify-content: flex-start;
+    @include respond(xl) {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    &-demo {
+        display: block;
+        position: relative;
+        flex-basis: 500px;
+        width: 447px;
+        height: 643px;
+        background-image: url(../img/book.svg);
+        background-repeat: no-repeat;
+        @include respond(xl) {
+            flex-basis: auto;
+            margin: 56px auto 0;
+        }
+                @include respond(sm) {
+            display: none;
+        }
+        &__title {
+            position: absolute;
+            top: 118px;
+            left: 131px;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            span {
+                display: block;
+                margin-top: 10px;
+                font-family: $font-secondary;
+                font-size: 14px;
+                color: $accent-color;
+                text-transform: initial;
+                letter-spacing: 0.7px;
+            }
+        }
+        &__author {
+            position: absolute;
+            bottom: 52px;
+            left: 87px;
+            font-family: $font-secondary;
+            font-size: 14px;
+            color: $accent-color;
+            letter-spacing: 0.7px;
+        }
+    }
+}

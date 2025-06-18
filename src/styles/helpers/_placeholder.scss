@@ -1,0 +1,22 @@
+%btn-base {
+    display: block;
+    color: $light-color;
+    font-size: $font-size-secondary;
+    background-image: linear-gradient(-90deg, #65e4ce 0, #65e4a1 100%);
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.7px;
+    box-shadow: 0 2px rgba(101, 228, 125, .5), inset 0 48px rgba(255, 255, 255, 0); 
+}
+
+%btn-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 rgba(101, 228, 125, .5), inset 0 50px rgba(0, 0, 0, .1);
+    }
+}
+
+

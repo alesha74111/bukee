@@ -1,0 +1,52 @@
+.author-img {
+    position: relative;
+    flex-basis: 445px;
+    @include respond(xl) {
+        flex-basis: 300px;
+    }
+    @include respond(lg) {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &--right {
+        height: 558px;
+        background-color: #426384;
+        background-image: linear-gradient(-60deg, #5acab1 0, #426384 100%);
+        @include respond(xl) {
+            height: 400px;
+        }
+        @include respond(lg) {
+            flex-basis: 400px;
+            max-width: 300px;
+        }
+        .author-img__pic {
+            position: absolute;
+            right: 10.118%;
+            top: 8.604%;
+            @include respond(xl) {
+                width: 300px;
+                top: 10%;
+            }
+        }
+    }
+    &--left {
+        height: 704px;
+        background-color: #5acab1;
+        background-image: linear-gradient(-60deg, #426384 0, #5acab1 100%);
+        @include respond(xl) {
+            height: 480px;
+        }
+        @include respond(lg) {
+            flex-basis: 480px;
+            max-width: 300px;
+        }
+        .author-img__pic {
+            position: absolute;
+            left: 11.727%;
+            top: 6.961%;
+            @include respond(xl) {
+                width: 300px;
+            }
+        }
+    }
+}

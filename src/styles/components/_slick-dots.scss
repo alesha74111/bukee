@@ -1,0 +1,29 @@
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    &>li {
+        margin: 0 5px;
+        &>button {
+            width: 8px;
+            height: 8px;
+            padding: 5px;
+            border: none;
+            background-color: $accent-color;
+            border-radius: 100%;
+            text-indent: -9999px;
+            line-height: 0;
+            font-size: 0;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &>li.slick-active {
+        &>button {
+            width: 32px;
+            border-radius: 10px;
+        }
+    }
+}

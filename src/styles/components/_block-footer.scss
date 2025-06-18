@@ -1,0 +1,80 @@
+.block-footer {
+    display: flex;
+    justify-content: space-between;
+    @include respond(lg) {
+        flex-wrap: wrap;
+        gap: 25px;
+        >div {
+            &:nth-child(1) {
+                flex-basis: 85%;
+            }
+            &:nth-child(2) {
+                flex-basis: 45%;
+            }
+            &:nth-child(3) {
+                flex-basis: 45%;
+            }
+        }
+    }
+        @include respond(sm) {
+        >div {
+            &:nth-child(1) {
+                flex-basis: 100%;
+            }
+            &:nth-child(2) {
+                flex-basis: 85%;
+            }
+            &:nth-child(3) {
+                flex-basis: 85%;
+            }
+        }
+    }
+    >div {
+        &:nth-child(1) {
+            flex-basis: 34.1%;
+        }
+        &:nth-child(2) {
+            flex-basis: 25.6%;
+        }
+        &:nth-child(3) {
+            flex-basis: 23.1%;
+        }
+    }
+    &__title {
+        margin-bottom: 18px;
+        font-size: $font-size-secondary;
+        color: $accent-color;
+        text-transform: uppercase;
+    }
+    &__list {
+        list-style-type: none;
+        address {
+            font-style: normal;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+            letter-spacing: .04em;
+            color: #9191b5;
+            line-height: 1.866666666;
+            transition: all 0.3s ease;
+            &:hover {
+                color: $light-color;
+                text-decoration: underline;
+            }
+        }
+    }
+    &__social {
+        display: flex;
+        list-style-type: none;
+        &>li {
+            margin-right: 10px;
+            a {
+                color: $accent-color;
+                &:hover {
+                    color: $light-color;
+                }
+            }
+        }
+    }
+}

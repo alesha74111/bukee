@@ -1,0 +1,52 @@
+.block-letter {
+    display: flex;
+    justify-content: space-between;
+    @include respond(xl) {
+        flex-direction: column;
+    }
+    &-item {
+        flex-basis: 49%;
+        @include respond(xl) {
+            flex-basis: 100%;
+            text-align: center;
+        }
+    }
+    &__title {
+        margin-top: 8px;
+        margin-bottom: 23px;
+        font-size: 48px;
+        letter-spacing: 1.9px;
+        @include respond(sm) {
+            font-size: 36px;
+            line-height: 1.1;
+        }
+    }
+    &__text {
+        font-family: $font-secondary;
+        font-size: $font-size-primary;
+        letter-spacing: 0.75px;
+        @include respond(xl) {
+            margin-bottom: 40px;
+        }
+    }
+    &__input {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px 27px;
+        background-color: $bg-dark-color;
+        border: none;
+        color: $gray-color;
+        border-radius: 3px;
+        letter-spacing: 0.6px;
+        @include respond(xl) {
+            max-width: 500px;
+        }
+        &:focus {
+            outline: 0;
+            border: 1px solid $accent-color;
+        }
+    }
+    ::placeholder {
+        color: $gray-color;
+    }
+}

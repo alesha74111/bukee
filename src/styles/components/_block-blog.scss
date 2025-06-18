@@ -1,0 +1,59 @@
+.block-blog {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 85px;
+    @include respond(lg) {
+        max-width: 600px;
+        margin: 85px auto 0;
+        flex-direction: column;
+        gap: 40px;
+    }
+    @include respond(sm) {
+        margin-top: 40px;
+        ;
+    }
+    &-item {
+        flex-basis: 32%;
+    }
+    h4 {
+        margin-bottom: 4px;
+        font-size: $font-size-secondary;
+        letter-spacing: 0.9px;
+    }
+    &-img {
+        width: 100%;
+        height: 224px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 15px;
+        img {
+            width: 100%;
+            height: 224px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+    }
+    &-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-bottom: 12px;
+        font-size: $font-size-primary;
+        letter-spacing: 0.8px;
+        a {
+            color: $accent-color;
+            text-decoration: none;
+        }
+        time {
+            color: $accent-color;
+        }
+    }
+    &__desc {
+        font-size: $font-size-primary;
+        font-family: $font-secondary;
+        letter-spacing: 0.7px;
+    }
+}

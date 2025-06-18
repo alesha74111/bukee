@@ -1,0 +1,61 @@
+.page__btn {
+    @extend %btn-base;
+    @include custom-block-style($max-width: 227px, $margin: 84px auto 0, $padding: 13px 0);
+    @extend %btn-hover;
+}
+.block-text__btn {
+    @extend %btn-base;
+    @include custom-block-style($max-width: 250px, $margin: 48px 0 19px, $padding: 11px 0 15px 0);
+    @extend %btn-hover;
+    @include respond(lg){
+        margin: 48px auto 35px;
+    }
+    &--main{
+        box-shadow: 0 -2px #59ba88 inset;
+    @include respond(xl) {
+        margin: 48px auto 19px;  
+        }    
+    }
+}
+.block-about-table__btn {
+    @extend %btn-base;
+    @include custom-block-style($margin: 28px 0 19px, $padding: 11px 45px 15px 45px);
+    @extend %btn-hover;
+    &:focus {
+        outline: 0;
+    }
+}
+.block-text-item__btn {
+    @extend %btn-base;
+    @include custom-block-style($max-width:137px, $margin: 24px 0 0, $padding: 11px 0 15px 0);
+    @extend %btn-hover;
+    @include respond(lg) {
+        margin: 24px auto 0;
+    }
+}
+.block-product-text a {
+    display: block;
+    @include custom-block-style($max-width: 120px, $margin: 0 auto, $padding: 0 0 5px 0);
+    font-size: $font-size-primary;
+    color: $accent-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+    &:hover {
+        border-bottom: 3px solid $accent-color;
+    }
+}
+.block-letter__btn {
+    @extend %btn-base;
+    @include custom-block-style($width: 100%, $margin: 21px 0 0, $padding: 11px 0 15px 0);
+    @extend %btn-hover;
+    @include respond(xl){
+        max-width: 500px;
+        margin: 21px auto 0;
+    }
+    &:focus {
+        outline: none;
+    }
+}

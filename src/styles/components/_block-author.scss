@@ -1,0 +1,14 @@
+.block-author {
+    display: flex;
+    justify-content: space-between;
+    @include respond(lg) {
+        flex-direction: column-reverse;
+        gap: 50px;
+        text-align: center;
+    }
+    &--left {
+        @include respond(lg) {
+            flex-direction: column;
+        }
+    }
+}

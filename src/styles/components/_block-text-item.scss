@@ -1,0 +1,22 @@
+.block-text-item {
+    &:not(:last-child) {
+        margin-bottom: 55px;
+    }
+    &__date {
+        display: block;
+        margin-bottom: 4px;
+        font-family: $font-secondary;
+        font-size: $font-size-primary;
+        letter-spacing: 0.8px;
+    }
+    &__title {
+        margin-bottom: 16px;
+        font-size: $font-size-secondary;
+        letter-spacing: 0.9px;
+    }
+    &__desc {
+        font-family: $font-secondary;
+        font-size: $font-size-primary;
+        letter-spacing: 0.75px;
+    }
+}

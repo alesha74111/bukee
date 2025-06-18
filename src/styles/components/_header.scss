@@ -1,0 +1,95 @@
+.header {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 38px 15px 166px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond(xl){
+        padding: 38px 15px 100px 15px;
+        flex-direction: column;
+        gap: 25px;
+    }
+    @include respond(lg){
+        flex-direction: row;
+    }
+    &__menu-toggle {
+        display: none;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: 0;
+        font-size: 25px;
+        background-color: transparent;
+        line-height: 0;
+        @include respond(lg){
+            display: block;
+        }
+    }
+    &__menu-close {
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+        color: $light-color;
+        line-height: 0;
+        @include respond(lg){
+            display: block;
+        }
+    }
+    &--lines {
+        background-image: url(../img/bg_lines.png);
+        background-origin: content-box;
+        background-size: cover;
+    }
+    &-list {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        font-family: $font-secondary;
+        gap: 22px;
+        @include respond(lg){
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            background-color: $bg-dark-color;
+            transform: translateX(-100%);
+            transition: 1s;
+        }
+        &.open {
+            transform: translateX(0%);
+        }
+        &__item {
+            border-bottom: 3px solid transparent;
+            transition: 0.3s;
+        &:hover {
+            border-bottom: 3px solid $accent-color;
+        }
+        @include respond(lg){
+            border-bottom: 1px solid $light-color;
+        }
+        }
+        &__item.active {
+            border-bottom: 3px solid $accent-color;
+            @include respond(lg){
+                border-bottom: 1px solid $light-color;
+            }
+        }
+        &__link {
+            display: inline-block;
+            padding: 5px 0;
+            color: $light-color;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+    }
+}

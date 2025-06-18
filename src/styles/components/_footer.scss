@@ -1,0 +1,8 @@
+.footer {
+    padding: 160px 0 130px;
+    background-color: $bg-dark-color;
+    color: $gray-color;
+    @include respond(lg) {
+        padding: 60px 0;
+    }
+}
