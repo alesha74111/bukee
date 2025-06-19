@@ -1,6 +1,6 @@
 .page__btn {
     @extend %btn-base;
-    @include custom-block-style($max-width: 227px, $margin: 84px auto 0, $padding: 13px 0);
+    @include custom-block-style($max-width: 227px, $margin: 84px auto 0, $padding: 13px 12px);
     @extend %btn-hover;
 }
 .block-text__btn {
